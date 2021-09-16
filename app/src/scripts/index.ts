@@ -63,12 +63,12 @@ function checkHeader(){
 headerButton.onclick = menuToggle;
 
 window.onclick = (e: MouseEvent) => {
-  if (
-    menuOpened &&
-    !e.composedPath().includes(headerButton) &&
-    !e.composedPath().includes(headerMenu)
-  )
+  if ( menuOpened && !e.composedPath().includes(headerButton) && !e.composedPath().includes(headerMenu)){
     menuToggle();
+  }
+  if(e.target.classList.contains('header__link')){
+    menuToggle()
+  }
 };
 
 
