@@ -1,0 +1,18 @@
+mixin header()
+  .header 
+    .header__nav.container 
+      a(href="index.html").header__logo 
+        img(src="images/logo.svg", alt="logo")
+      ul.header__list 
+        li.header__li 
+          a(href="#advantages").header__link Преимущества  
+        li.header__li 
+          a(href="#examples").header__link Примеры работ
+        li.header__li 
+          a(href="#!").header__link Отзывы  
+        li.header__li 
+          a(href="tel:+78123208270").header__link 
+            img(src="images/tel.svg", alt="tel")
+            | + 7 (812) 320 82 70
+      button.header__button 
+        span.header__button-line

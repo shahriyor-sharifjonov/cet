@@ -1,0 +1,27 @@
+mixin footer()
+  footer.footer 
+    .footer__body.container 
+      .footer__col
+        p.footer__p <b>Адрес:</b> 125284, г. Москва, Ленинградский проспект, дом 31А, стр. 1, этаж 20 <br><b>Часы работы:</b> Пн-Пт — с 9:00 до 18:00
+        p.footer__p <b>Электронная почта:</b> info@set.org <br><b>Техническая поддержка сервиса:</b> support@set.org
+        p.footer__p <b>Телефон:</b> <a href="tel:+ 78123208270">+ 7 (812) 320 82 70
+      .footer__col 
+        a(href="#advantages").footer__link Приемущества 
+        a(href="#recomendation").footer__link Рекомендации 
+        a(href="#form").footer__link Бесплатная консультация 
+        a(href="#examples").footer__link Примеры работ 
+        p.footer__p.mt-25 Следите за нами в соцсетях:
+        .footer__row 
+          a(href="#!").footer__social-link
+            img(src="images/facebook.svg", alt="").footer__social-img 
+          a(href="#!").footer__social-link
+            img(src="images/wk.svg", alt="").footer__social-img 
+          a(href="#!").footer__social-link
+            img(src="images/instagram.svg", alt="").footer__social-img 
+          a(href="#!").footer__social-link
+            img(src="images/youtube.svg", alt="").footer__social-img 
+      form(action="").footer__col 
+        p.footer__p_light <b>Новости о наших ситема энергоснабжения</b> <br>(Только 1 раз в месяц)
+        input(type="text" placeholder="Имя").footer__input
+        input(type="email" placeholder="E-mail").footer__input
+        button(type="submit").footer__btn Подписаться

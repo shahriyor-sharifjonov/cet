@@ -1,0 +1,191 @@
+.intro{
+  background: url('../images/intro.webp') center / cover no-repeat;
+  margin-top: -150px;
+  padding-top: 180px;
+  padding-bottom: 400px;
+  @include media($md){
+    margin-top: -50px;
+    padding-top: 80px;
+  }
+  &__body{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    @include media(992){
+      align-items: center;
+    }
+  }
+  &__title{
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 42px;
+    line-height: 48px;
+    color: #FFFFFF;
+    margin-bottom: 50px;
+    max-width: 450px;
+    width: 100%;
+    @include media(992){
+      text-align: center;
+      font-size: 24px;
+      line-height: 28px;
+    }
+  }
+  &__p{
+    margin-bottom: 50px;
+    font-size: 16px;
+    line-height: 22px;
+    max-width: 530px;
+    width: 100%;
+    color: #FFFFFF;
+    display: block;
+    @include media(992){
+      font-size: 16px;
+      line-height: 22px;
+      text-align: center;
+    }
+  }
+  &__btn{
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 14px 12px 15px 12px;
+    text-decoration: none;
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;
+    display: flex;
+    max-width: max-content;
+    align-items: center;
+    justify-content: center;
+    transition: 200ms ease;
+    background: none;
+    cursor: pointer;
+    font-family: inherit;
+    @include media(992){
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media (hover: hover){
+      &:hover{
+        background: #fff;
+        color: #007FBA;
+      }
+    }
+  }
+}
+
+.intro__row{
+  margin-top: -300px;
+  margin-bottom: 100px;
+  &-body{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    @include media(992){
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
+  }
+  &-item{
+    background: #FFFFFF;
+    box-shadow: 8px 8px 10px 8px rgba(0, 0, 0, 0.15);
+    max-width: 346px;
+    width: 100%;
+    padding: 30px 28px;
+    position: relative;
+    z-index: 2;
+    @include media(992){
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &:not(:last-child){
+      margin-right: 50px;
+      @include media(992){
+        margin-right: 0;
+        margin-bottom: 60px;
+      }
+      @include media($sm){
+        margin-bottom: 25px;
+      }
+    }
+    &::before{
+      content: '';
+      z-index: -1;
+      background: #fff;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      position: absolute;
+    }
+    &::after{
+      content: '';
+      position: absolute;
+      top: 28px;
+      left: 18px;
+      width: 100%;
+      height: 100%;
+      border: 2px solid #C4C4C4;
+      z-index: -2;
+      @include media($sm){
+        display: none;
+      }
+    }
+  }
+  &-title{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+    color: #007FBA;
+    margin-bottom: 25px;
+    @include media($sm){
+      font-size: 16px;
+      line-height: 18px;
+      text-align: center;
+    }
+  }
+  &-row{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    @include media($sm){
+      flex-direction: column;
+      align-items: center;
+    }
+    &:not(:last-child){
+      margin-bottom: 25px;
+    }
+  }
+  &-image{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 50px;
+    width: 50px;
+    height: 50px;
+    background: #007FBA;
+    border-radius: 50%;
+    margin-right: 15px;
+    @include media($sm){
+      margin-right: 0;
+    }
+  }
+  &-p{
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #333333;
+    @include media($sm){
+      text-align: center;
+      margin-top: 10px;
+    }
+  }
+}

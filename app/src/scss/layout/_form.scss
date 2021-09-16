@@ -1,0 +1,96 @@
+.form{
+  background: url("../images/background.webp") top / cover no-repeat;
+  margin-top: -800px;
+  padding-top: 880px;
+  padding-bottom: 100px;
+  @include media(1200){
+    padding-top: 750px;
+  }
+  &__body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 725px;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &__title{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 42px;
+    line-height: 48px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 50px;
+    @include media($md){
+      font-size: 24px;
+      line-height: 28px;
+      margin-bottom: 25px;
+    }
+  }
+  &__input{
+    width: 100%;
+    height: 50px;
+    border: 2px solid #FFFFFF;
+    border-radius: 0;
+    padding: 14px 10px 15px 20px;
+    background: none;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    background: #007FBA33;
+    color: #FFFFFF;    
+    &:not(:last-child){
+      margin-bottom: 25px;
+    }
+    &::placeholder{
+      font-family: Open Sans;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 22px;
+      color: #FFFFFF;    
+    }
+  }
+  &__btn{
+    margin-top: 50px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    color: #007FBA;
+    background: #fff;
+    border: none;
+    padding: 14px 12px;
+    cursor: pointer;
+  }
+  &__p{
+    margin-top: 25px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 14px;
+    text-align: center;
+    color: #FFFFFF;
+    max-width: 370px;
+    width: 100%;
+    a{
+      font-family: Open Sans;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 10px;
+      line-height: 14px;
+      text-align: center;
+      color: #FFFFFF;
+    }
+  }
+}

@@ -1,0 +1,72 @@
+.recomendation{
+  margin-bottom: 100px;
+  &__title{
+    text-align: center;
+    margin-bottom: 50px;
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 42px;
+    line-height: 48px;
+    text-align: center;
+    color: #007FBA;
+    @include media($md){
+      font-size: 24px;
+      line-height: 28px;
+    }
+  }
+  &__item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+    margin: 0 8px;
+    padding: 16px;
+    max-height: 200px;
+    @include media($md){
+      max-height: 150px;
+    }
+    img{
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+  & .slick{
+    &-list{
+      padding: 10px 0;
+      overflow: hidden;
+    }
+    &-track{
+      display: flex;
+    }
+    &-dots{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      list-style-type: none;
+      margin-top: 20px;
+      li{
+        &:not(:last-child){
+          margin-right: 8px;
+        }
+        &.slick-active{
+          button{
+            background: #007FBA;
+            width: 10px;
+            height: 10px;
+          }
+        }
+        button{
+          width: 6px;
+          height: 6px;
+          border: 1px solid #007FBA;
+          border-radius: 50%;
+          font-size: 0;
+          background: none;
+          transition: 200ms ease;
+        }
+      }
+    }
+  }
+}

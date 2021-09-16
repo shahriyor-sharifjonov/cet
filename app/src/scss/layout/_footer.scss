@@ -1,0 +1,115 @@
+.footer{
+  padding: 100px 0;
+  &__body{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    @include media(992){
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  &__col{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 366px;
+    width: 100%;
+    &:not(:last-child){
+      margin-right: 50px;
+      @include media(992){
+        margin-right: 0;
+        margin-bottom: 50px;
+      }
+    }
+    @include media(992){
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  &__p{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: #333333;
+    @include media(992){
+      text-align: center;
+    }
+    &:not(:last-child){
+      margin-bottom: 25px;
+    }
+    a{
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 19px;
+      color: #333333;
+      text-decoration: none;
+    }
+    &_light{
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 19px;
+      margin-bottom: 11px;
+      @include media(992){
+        text-align: center;
+      }
+    }
+  }
+  &__link{
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 19px;
+    color: #333333;
+    text-decoration: none;
+    &:not(:last-child){
+      margin-bottom: 7px;
+    }
+  }
+  &__row{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  &__social-link{
+    &:not(:last-child){
+      margin-right: 15px;
+    }
+  }
+  &__input{
+    width: 100%;
+    height: 36px;
+    padding: 8px;
+    background: #fff;
+    border: 1px solid #333333;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    color: #333333;    
+    &:not(:last-of-type){
+      margin-bottom: 11px;
+    }
+  }
+  &__btn{
+    margin-top: 20px;
+    padding: 7px 10px;
+    border: 2px solid #007FBA;
+    background: none;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    color: #007FBA;
+    cursor: pointer;
+    transition: 200ms ease;
+    @media (hover:hover){
+      &:hover{
+        background: #007FBA;
+        color: #fff;
+      }
+    }
+  }
+}

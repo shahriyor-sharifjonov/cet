@@ -1,0 +1,65 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Document
+    link(href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet")
+    link(rel="stylesheet", href="styles/index.css")
+  body 
+    include components/header.pug 
+    +header 
+    include components/intro.pug 
+    +intro 
+    include components/srok.pug 
+    +srok 
+    include components/recomendation.pug 
+    +recomendation 
+    include components/examples.pug 
+    +examples 
+    include components/form.pug 
+    +form 
+    include components/footer.pug 
+    +footer 
+
+    .popup 
+      .popup__body
+        button(onclick="openPopup()").popup__close 
+          img(src="images/close.svg", alt="")
+        form(action="").popup__form
+          h2.popup__title Ответьте на несколько вопросов и получите профессиональную консультацию по их решению
+          .popup__item 
+            p.popup__p 1. Ваш дом советской постройки?
+            .popup__chks 
+              input(type="radio" name="chk1" id="chk1-1").popup__chk
+              label(for="chk1-1").popup__label Да 
+              input(type="radio" name="chk1" id="chk1-2").popup__chk
+              label(for="chk1-2").popup__label Нет 
+          .popup__item 
+            p.popup__p 2. Имеется ли элеваторный узел в вашем тепловом пункте ?
+            .popup__chks 
+              input(type="radio" name="chk2" id="chk2-1").popup__chk
+              label(for="chk2-1").popup__label Да 
+              input(type="radio" name="chk2" id="chk2-2").popup__chk
+              label(for="chk2-2").popup__label Не знаю
+          .popup__item 
+            p.popup__p 3. Интересует ли экономия тепловой энергии в вашем ИТП до 30% за сезон?
+            .popup__chks 
+              input(type="radio" name="chk3" id="chk3-1").popup__chk
+              label(for="chk3-1").popup__label Да 
+              input(type="radio" name="chk3" id="chk3-2").popup__chk
+              label(for="chk3-2").popup__label Нет 
+          .popup__item.col 
+            p.popup__p 4. Опишите задачи или вопросы, к которым нужны решения и ответы.
+            textarea(name="text", cols="30", rows="10").popup__textarea 
+          .popup__item.col 
+            p.popup__p.mb-6 5. Оставьте свои контакты (имя, фамилия, номер телефона, почта по желанию)
+            input(type="text" placeholder="Имя и фамилия" required).popup__input
+            input(type="tel" placeholder="Номер телефона" required).popup__input
+            input(type="email" placeholder="E-mail").popup__input
+          button(type="submit").popup__btn Отправить
+    script(src="scripts/jquery.js") 
+    script(src="scripts/slick.min.js") 
+    script(src="scripts/index.js") 
